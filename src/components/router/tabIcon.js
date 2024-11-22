@@ -13,13 +13,33 @@ const TabIcon = ({screenName, color, focused, size}) => {
       <Book1 size={size} color={color} variant={focused ? 'Bold' : 'Outline'} />
     );
   }
-  i;
-
-  return (
-    <View>
-      <Text>tabIcon</Text>
-    </View>
-  );
+  if (screenName === EPISODES) {
+    return (
+      <PresentionChart
+        size={size}
+        color={color}
+        variant={focused ? 'Bold' : 'Outline'}
+      />
+    );
+  }
+  if (screenName === LOCATIONS) {
+    return (
+      <LocationTick
+        size={size}
+        color={color}
+        variant={focused ? 'Bold' : 'Outline'}
+      />
+    );
+  }
+  if (screenName === SETTINGS) {
+    return (
+      <Setting2
+        size={size}
+        color={color}
+        variant={focused ? 'Bold' : 'Outline'}
+      />
+    );
+  }
 };
 
 export default TabIcon;

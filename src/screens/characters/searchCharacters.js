@@ -1,7 +1,7 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 
-const searchCharacters = () => {
+const SearchCharacters = () => {
   return (
     <View>
       <Text>searchCharacters</Text>
@@ -9,4 +9,4 @@ const searchCharacters = () => {
   );
 };
 
-export default searchCharacters;
+export default SearchCharacters;

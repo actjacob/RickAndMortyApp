@@ -1,12 +1,12 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 
-const CharacterDetail = () => {
+const Settings = () => {
   return (
     <View>
-      <Text>CharacterDetail</Text>
+      <Text>Settings</Text>
     </View>
   );
 };
 
-export default CharacterDetail;
+export default Settings;

@@ -1,7 +1,7 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 
-const filterCharacters = () => {
+const FilterCharacters = () => {
   return (
     <View>
       <Text>filterCharacters</Text>
@@ -9,4 +9,4 @@ const filterCharacters = () => {
   );
 };
 
-export default filterCharacters;
+export default FilterCharacters;
