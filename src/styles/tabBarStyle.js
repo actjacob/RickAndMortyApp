@@ -9,5 +9,4 @@ const tabBarStyle = StyleSheet.create({
     backgroundColor: Colors.BACKGROUNDCOLOR,
   },
 });
-
 export {tabBarStyle};
