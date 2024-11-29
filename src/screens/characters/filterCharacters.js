@@ -1,15 +1,3 @@
-// import {View, Text} from 'react-native';
-// import React from 'react';
-
-// const FilterCharacters = () => {
-//   return (
-//     <View>
-//       <Text>filterCharacters</Text>
-//     </View>
-//   );
-// };
-
-// export default FilterCharacters;
 import {View, Text, ScrollView, TouchableOpacity, Alert} from 'react-native';
 import React from 'react';
 import screenStyle from '../../styles/screenStyle';
@@ -32,6 +20,7 @@ export default function FilterCharacters() {
     dispatch(changeParams({gender: null, status: null}));
     navigation.goBack();
   };
+
   return (
     <View style={screenStyle.container}>
       <View style={{flex: 1}}>

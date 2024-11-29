@@ -4,14 +4,18 @@ import {CHARACTERDETAIL} from '../../utils/routes';
 import {ArrowRight} from 'iconsax-react-native';
 import {useNavigation} from '@react-navigation/native';
 import Colors from '../../theme/colors';
+import {Dimensions} from 'react-native';
+
+// const screenWidth = Dimensions.get('window').width;
 
 const CharacterCard = ({item}) => {
   const navigation = useNavigation();
   return (
     <Pressable
-      onPress={() =>
-        navigation.navigate(CHARACTERDETAIL, {characterID: item.id})
-      }
+      onPress={() => {
+        console.log('Navigating with characterID:', item.id);
+        navigation.navigate(CHARACTERDETAIL, {characterID: item.id});
+      }}
       style={styles.container}>
       <View style={styles.imageContainer}>
         <Image source={{uri: item.image}} style={styles.image} />

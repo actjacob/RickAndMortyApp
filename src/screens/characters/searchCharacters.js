@@ -1,15 +1,3 @@
-// import {View, Text} from 'react-native';
-// import React from 'react';
-
-// const SearchCharacters = () => {
-//   return (
-//     <View>
-//       <Text>searchCharacters</Text>
-//     </View>
-//   );
-// };
-
-// export default SearchCharacters;
 import {View, Text, FlatList, TextInput, Alert} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import CustomButton from '../../components/ui/customButton';
@@ -19,6 +7,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {getCharacterList} from '../../store/reducers/characterActions';
 import {changeParams} from '../../store/reducers/characterSlice';
 import SearchItem from '../../components/characters/searchItem';
+import Spinner from '../../components/ui/spinner';
 
 export default function SearchCharacters() {
   const dispatch = useDispatch();
@@ -26,12 +15,14 @@ export default function SearchCharacters() {
     state => state.characters,
   );
   const [searchText, setSearchText] = useState('');
+
   useEffect(() => {
     dispatch(getCharacterList(params));
-  }, []);
+  }, [params]); // params değiştiğinde yeniden çalışacak
 
   const handleSubmit = () => {
     dispatch(changeParams({name: searchText}));
+    dispatch(getCharacterList(params)); // params değiştiğinde yeni verileri al
   };
 
   const ListHeaderComponent = () => {
@@ -42,6 +33,7 @@ export default function SearchCharacters() {
           placeholder="Search Character"
           onSubmitEditing={handleSubmit}
           style={{
+            marginTop: 20,
             width: '95%',
             borderWidth: 0.5,
             backgroundColor: Colors.BACKTITLECOLOR,
@@ -64,11 +56,15 @@ export default function SearchCharacters() {
 
   return (
     <View style={screenStyle.container}>
-      <FlatList
-        ListHeaderComponent={ListHeaderComponent}
-        data={characterList}
-        renderItem={({item}) => <SearchItem item={item} />}
-      />
+      {pending ? (
+        <Spinner /> // Yükleniyor göstergesi
+      ) : (
+        <FlatList
+          ListHeaderComponent={ListHeaderComponent}
+          data={characterList}
+          renderItem={({item}) => <SearchItem item={item} />}
+        />
+      )}
     </View>
   );
 }
