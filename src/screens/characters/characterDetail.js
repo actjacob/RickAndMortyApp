@@ -13,7 +13,7 @@
 import {View, Text, ScrollView, Image} from 'react-native';
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {getSingleCharacter} from '../../store/actions/characterActions';
+import {getSingleCharacter} from '../../store/reducers/characterActions';
 import Spinner from '../../components/ui/spinner';
 import screenStyle from '../../styles/screenStyle';
 import {characterDetailStyle} from '../../styles/charactersStyle';

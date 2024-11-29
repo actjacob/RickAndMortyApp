@@ -16,10 +16,8 @@ import CustomButton from '../../components/ui/customButton';
 import Colors from '../../theme/colors';
 import screenStyle from '../../styles/screenStyle';
 import {useDispatch, useSelector} from 'react-redux';
-import {
-  changeParams,
-  getCharacterList,
-} from '../../store/actions/characterActions';
+import {getCharacterList} from '../../store/reducers/characterActions';
+import {changeParams} from '../../store/reducers/characterSlice';
 import SearchItem from '../../components/characters/searchItem';
 
 export default function SearchCharacters() {

@@ -24,8 +24,8 @@ function RootNavigator() {
       }}>
       <Stack.Group>
         <Stack.Screen name={TABNAVIGATOR} component={TabNavigator} />
-        <Stack.Screen name={CHARACTERDETAIL} component={CharacterDetail} />{' '}
-        <Stack.Screen name={FILTERCHARACTERS} component={FilterCharacters} />{' '}
+        <Stack.Screen name={CHARACTERDETAIL} component={CharacterDetail} />
+        <Stack.Screen name={FILTERCHARACTERS} component={FilterCharacters} />
         <Stack.Screen name={SEARCHCHARACTERS} component={SearchCharacters} />
       </Stack.Group>
     </Stack.Navigator>

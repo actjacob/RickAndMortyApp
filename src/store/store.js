@@ -5,16 +5,16 @@
 // const store = createStore(rootReducer, applyMiddleware(thunk));
 // export default store;
 import {configureStore} from '@reduxjs/toolkit';
-import characterSlice from './characterSlice';
-import thunk from 'redux-thunk';
+import characterReducer from './reducers/characterSlice';
 
 const store = configureStore({
-  reducer: characterSlice,
+  reducer: {
+    characters: characterReducer, // Reducer bir obje içinde tanımlanmalı.
+  },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
-      thunk: true,
       serializableCheck: false,
-    }).concat(thunk),
+    }),
 });
 
 export default store;

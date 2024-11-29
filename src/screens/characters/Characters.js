@@ -13,7 +13,7 @@
 import {useEffect} from 'react';
 import {FlatList, Text, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
-import {getCharacterList} from '../../store/actions/characterActions';
+import {getCharacterList} from '../../store/reducers/characterActions';
 import Spinner from '../../components/ui/spinner';
 import screenStyle from '../../styles/screenStyle';
 import CharacterCard from '../../components/characters/characterCard';

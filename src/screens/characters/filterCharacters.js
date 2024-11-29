@@ -16,7 +16,7 @@ import screenStyle from '../../styles/screenStyle';
 import Colors from '../../theme/colors';
 import {genders, status} from '../../utils/constants';
 import {useDispatch, useSelector} from 'react-redux';
-import {changeParams} from '../../store/actions/characterActions';
+import {changeParams} from '../../store/reducers/characterSlice';
 import CustomButton from '../../components/ui/customButton';
 import {useNavigation} from '@react-navigation/native';
 

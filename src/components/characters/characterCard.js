@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   infoContainer: {
+    marginLeft: 15,
     flex: 2,
     justifyContent: 'center',
     gap: '15',
