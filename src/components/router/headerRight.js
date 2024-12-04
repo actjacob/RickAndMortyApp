@@ -26,10 +26,11 @@ export default function HeaderRight() {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-end',
     flex: 1,
     alignItems: 'center',
     marginHorizontal: 5,
+    marginRight: 5,
   },
   button: {
     marginHorizontal: 5,

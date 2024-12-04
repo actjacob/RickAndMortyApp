@@ -22,7 +22,7 @@ const SearchItem = ({item}) => {
 export default SearchItem;
 
 const styles = StyleSheet.create({
-  containe: {
+  container: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',

@@ -6,6 +6,7 @@ export const characterDetailStyle = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginVertical: 10,
+    marginTop: 50,
   },
   image: {
     width: 160,
